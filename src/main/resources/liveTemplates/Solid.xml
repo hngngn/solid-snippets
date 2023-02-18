@@ -1,0 +1,204 @@
+<templateSet group="Solid">
+    <template name="scsig" value="const [$VAR$, set$VAR_SET$] = createSignal($DEFAULT_VAL$);$END$"
+              description="Simple createSignal" toReformat="true" toShortenFQNames="true">
+        <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="VAR_SET" expression="capitalize(VAR)" defaultValue="" alwaysStopAt="false"/>
+        <variable name="DEFAULT_VAL" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JSX_HTML" value="false"/>
+            <option name="JS_CLASS" value="false"/>
+        </context>
+    </template>
+    <template name="sceff" value="createEffect(() =&gt; {&#10;    $END$&#10;});" description="Simple createEffect"
+              toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JSX_HTML" value="false"/>
+            <option name="JS_CLASS" value="false"/>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="false"/>
+        </context>
+    </template>
+    <template name="sfcompie"
+              value="import { Component } from &quot;solid-js&quot;;&#10;&#10;const $1$: Component&lt;{$2$}&gt; = props =&gt; {&#10;    return (&#10;        &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;};&#10;&#10;export default $1$;"
+              description="Solid empty function component with import and default export" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="int" value="export interface $1$ {&#10;    $END$&#10;}" description="Typescript Interface"
+              toReformat="true" toShortenFQNames="true">
+        <variable name="1" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="type" value="export type $1$ = {&#10;    $END$&#10;}" description="Typescript Type"
+              toReformat="true" toShortenFQNames="true">
+        <variable name="1" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="farr" value="const $VAR_NAME$ = ($PARAM$) =&gt; $END$;" description="Arrow function variable"
+              toReformat="true" toShortenFQNames="true">
+        <variable name="VAR_NAME" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+        </context>
+    </template>
+    <template name="scmemo" value="const $VAR$ = createMemo(() =&gt; $DEFAULT_VAL$);" description="Simple createMemo"
+              toReformat="true" toShortenFQNames="true">
+        <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="DEFAULT_VAL" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_CLASS" value="true"/>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="spfcompie"
+              value="import { ParentComponent } from &quot;solid-js&quot;;&#10;&#10;const $1$: ParentComponent&lt;{$2$}&gt; = props =&gt; {&#10;    return (&#10;        &lt;div&gt;{props.children}&lt;/div&gt;&#10;    );&#10;};&#10;&#10;export default $1$;"
+              description="Solid empty Parent Component with import and default export" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="sfcompien"
+              value="import { Component } from &quot;solid-js&quot;;&#10;&#10;export const $1$: Component&lt;{$2$}&gt; = props =&gt; {&#10;    return (&#10;        &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;};"
+              description="Solid empty function component with import and named export" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="spfcompien"
+              value="import { ParentComponent } from &quot;solid-js&quot;;&#10;&#10;export const $1$: ParentComponent&lt;{$2$}&gt; = props =&gt; {&#10;    return (&#10;        &lt;div&gt;{props.children}&lt;/div&gt;&#10;    );&#10;};"
+              description="Solid empty Parent Component with import and named export" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="sffcompie"
+              value="import { FlowComponent, JSX } from &quot;solid-js&quot;;&#10;&#10;const $1$: FlowComponent&lt;{$2$, JSX.Element}&gt; = props =&gt; {&#10;    return (&#10;        &lt;div&gt;{props.children}&lt;/div&gt;&#10;    );&#10;};&#10;&#10;export default $1$;"
+              description="Solid empty Flow Component with import and default export" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="sffcompien"
+              value="import { FlowComponent, JSX } from &quot;solid-js&quot;;&#10;&#10;export const $1$: FlowComponent&lt;{$2$, JSX.Element}&gt; = props =&gt; {&#10;    return (&#10;        &lt;div&gt;{props.children}&lt;/div&gt;&#10;    );&#10;};"
+              description="Solid empty Flow Component with import and named export" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="svfcompie"
+              value="import { VoidComponent } from &quot;solid-js&quot;;&#10;&#10;const $1$: VoidComponent&lt;{$2$}&gt; = props =&gt; {&#10;    return (&#10;        &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;};&#10;&#10;export default $1$;"
+              description="Solid empty Void Component with import and default export" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="asyncfarr" value="const $VAR_NAME$ = async ($PARAM$) =&gt; $END$;"
+              description="Async arrow function variable" toReformat="true" toShortenFQNames="true">
+        <variable name="VAR_NAME" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+        </context>
+    </template>
+    <template name="scres" value="const [data, {mutate, refetch}] = createResource($DEFAULT_VAL$);$END$"
+              description="Simple createResource" toReformat="true" toShortenFQNames="true">
+        <variable name="DEFAULT_VAL" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JSX_HTML" value="false"/>
+            <option name="JS_CLASS" value="false"/>
+        </context>
+    </template>
+    <template name="sonm" value="onMount(() =&gt; {&#10;    $END$&#10;});" description="Simple onMount"
+              toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JSX_HTML" value="false"/>
+            <option name="JS_CLASS" value="false"/>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="false"/>
+        </context>
+    </template>
+    <template name="sonc" value="onCleanup(() =&gt; {&#10;    $END$&#10;});" description="Simple onCleanup"
+              toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JSX_HTML" value="false"/>
+            <option name="JS_CLASS" value="false"/>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="false"/>
+        </context>
+    </template>
+    <template name="sone" value="onError(() =&gt; {&#10;    $END$&#10;});" description="Simple onError"
+              toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JSX_HTML" value="false"/>
+            <option name="JS_CLASS" value="false"/>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="false"/>
+        </context>
+    </template>
+    <template name="scstore" value="const [$VAR$, set$VAR_SET$] = createStore($DEFAULT_VAL$);$END$"
+              description="Simple createStore" toReformat="true" toShortenFQNames="true">
+        <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="VAR_SET" expression="capitalize(VAR)" defaultValue="" alwaysStopAt="false"/>
+        <variable name="DEFAULT_VAL" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JSX_HTML" value="false"/>
+            <option name="JS_CLASS" value="false"/>
+        </context>
+    </template>
+    <template name="sfor"
+              value="&lt;For each={$1$} fallback={&lt;div&gt;Loading...&lt;/div&gt;}&gt;&#10;  {(item) =&gt; &lt;div&gt;{item}&lt;/div&gt;}&#10;&lt;/For&gt;"
+              description="Solid for control flow" toReformat="true" toShortenFQNames="true">
+        <variable name="1" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JSX_HTML" value="true"/>
+        </context>
+    </template>
+    <template name="sshow"
+              value="&lt;Show when={$1$} fallback={&lt;div&gt;Loading...&lt;/div&gt;}&gt;&#10;  &lt;div&gt;$2$&lt;/div&gt;&#10;&lt;/Show&gt;"
+              description="Solid show control flow" toReformat="true" toShortenFQNames="true">
+        <variable name="1" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JSX_HTML" value="true"/>
+        </context>
+    </template>
+    <template name="sswitch"
+              value="&lt;Switch fallback={&lt;div&gt;Not Found&lt;/div&gt;}&gt;&#10;  &lt;Match when={$1$}&gt;&#10;    &lt;div&gt;$END$&lt;/div&gt;&#10;  &lt;/Match&gt;&#10;&lt;/Switch&gt;"
+              description="Solid switch control flow" toReformat="true" toShortenFQNames="true">
+        <variable name="1" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JSX_HTML" value="true"/>
+        </context>
+    </template>
+</templateSet>
