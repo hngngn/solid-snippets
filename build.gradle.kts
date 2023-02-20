@@ -1,15 +1,18 @@
+import org.jetbrains.changelog.Changelog
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+fun properties(key: String) = project.findProperty(key).toString()
 
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "1.7.20"
-    id("org.jetbrains.intellij") version "1.10.1"
+    id("org.jetbrains.intellij") version "1.13.0"
     id("org.jetbrains.changelog") version "2.0.0"
 }
 
-group = "com.hngngn.solid.snippets"
-version = "1.0.0"
+group = properties("pluginGroup")
+version = properties("pluginVersion")
 
 repositories {
     mavenCentral()
@@ -18,10 +21,15 @@ repositories {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2022.1.4")
-    type.set("IC") // Target IDE Platform
+    pluginName.set(properties("pluginName"))
+    version.set(properties("platformVersion"))
+    type.set(properties("platformType"))
 
-    plugins.set(listOf(/* Plugin Dependencies */))
+    plugins.set(properties("platformPlugins").split(',').map(String::trim).filter(String::isNotEmpty))
+}
+
+changelog {
+    groups.set(emptyList())
 }
 
 tasks {
@@ -34,11 +42,31 @@ tasks {
         kotlinOptions.jvmTarget = "11"
     }
 
-    patchPluginXml {
-        sinceBuild.set("221")
-        untilBuild.set("231.*")
+    wrapper {
+        gradleVersion = properties("gradleVersion")
+    }
 
-        pluginDescription.set(File("./README.md").readText().lines().joinToString("\n").run { markdownToHTML(this) })
+    patchPluginXml {
+        version.set(properties("pluginVersion"))
+        sinceBuild.set(properties("pluginSinceBuild"))
+        untilBuild.set(properties("pluginUntilBuild"))
+
+        pluginDescription.set(
+            File("./README.md")
+                .readText().lines()
+                .joinToString("\n")
+                .run { markdownToHTML(this) })
+
+        changeNotes.set(provider {
+            with(changelog) {
+                renderItem(
+                    getOrNull(properties("pluginVersion"))
+                        ?: runCatching { getLatest() }.getOrElse { getUnreleased() },
+                    Changelog.OutputType.HTML,
+                )
+            }
+        })
+
     }
 
     signPlugin {
@@ -48,6 +76,8 @@ tasks {
     }
 
     publishPlugin {
+        dependsOn("patchChangelog")
         token.set(System.getenv("PUBLISH_TOKEN"))
+        channels.set(listOf(properties("pluginVersion").split('-').getOrElse(1) { "default" }.split('.').first()))
     }
 }
