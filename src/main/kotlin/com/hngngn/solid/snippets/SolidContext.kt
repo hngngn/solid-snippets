@@ -1,4 +1,4 @@
-package com.hngngn.solid.snippets.solidsnippets
+package com.hngngn.solid.snippets
 
 import com.intellij.codeInsight.template.TemplateActionContext
 import com.intellij.codeInsight.template.TemplateContextType
