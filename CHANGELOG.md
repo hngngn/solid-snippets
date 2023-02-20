@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.0.6]
+
 ## [1.0.5]
 
 ## [1.0.4]
@@ -10,10 +12,6 @@
 - Update deprecated TemplateContextType
 
 ## [1.0.3]
-
-### Fix
-
-- Permission
 
 ## [1.0.2]
 
@@ -37,6 +35,8 @@
 ### Added
 
 - Initial project scaffold
+
+[1.0.6]: https://github.com/hnggngn/solid-snippets/compare/v1.0.5...v1.0.6
 
 [1.0.5]: https://github.com/hnggngn/solid-snippets/compare/v1.0.4...v1.0.5
 
