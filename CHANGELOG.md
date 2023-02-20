@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4]
+
+### Fix
+
+- Support 2022.3
+- Update deprecated TemplateContextType
+
 ## [1.0.3]
 
 ### Fix
@@ -28,6 +35,8 @@
 ### Added
 
 - Initial project scaffold
+
+[1.0.4]: https://github.com/hnggngn/solid-snippets/compare/v1.0.3...v1.0.4
 
 [1.0.3]: https://github.com/hnggngn/solid-snippets/compare/v1.0.2...v1.0.3
 
