@@ -8,9 +8,6 @@ jobs:
   release:
     name: Publish Plugin
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
 
       - name: Fetch Sources
@@ -42,8 +39,7 @@ jobs:
         if: ${{ steps.properties.outputs.changelog != '' }}
         env:
           CHANGELOG: ${{ steps.properties.outputs.changelog }}
-        run: |
-          ./gradlew patchChangelog --release-note="$CHANGELOG"
+        run: ./gradlew patchChangelog --release-note="$CHANGELOG"
 
       - name: Publish Plugin
         env:
