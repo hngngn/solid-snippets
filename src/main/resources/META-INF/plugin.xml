@@ -19,6 +19,6 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplates file="/liveTemplates/Solid.xml"/>
-        <liveTemplateContext implementation="com.hngngn.solid.snippets.SolidContext"/>
+        <liveTemplateContext implementation="com.hngngn.solid.snippets.SolidContext" contextId="SOLID"/>
     </extensions>
 </idea-plugin>
