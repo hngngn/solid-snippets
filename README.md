@@ -1,9 +1,3 @@
-<p>
-  <a href="https://github.com/hnggngn/solid-snippets">
-    <img width="100%" src="https://assets.solidjs.com/banner?type=Snippets&background=tiles&project=%20" alt="Solid Snippets">
-  </a>
-</p>
-
 # Solid Snippets
 
 A helpful snippets for Solid.js with Typescript.
