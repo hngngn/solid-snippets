@@ -22,6 +22,44 @@ A helpful snippets for Solid.js with Typescript.
 <tr>
 <td>
 
+`sjfcompie`
+</td>
+<td>Solid empty function component with import and default export</td>
+<td>
+
+```jsx
+const $1$ = props => {
+    return (
+        <div>$END$</div>
+    );
+};
+
+export default $1$;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+`sjfcompien`
+</td>
+<td>Solid empty function component with import and named export</td>
+<td>
+
+```jsx
+export const $1$ = props => {
+    return (
+        <div>$END$</div>
+    );
+};
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
 `sfcompie`
 </td>
 <td>Solid empty function component with import and default export</td>
@@ -163,6 +201,26 @@ const $1$: VoidComponent<{ $2$ }> = props => {
 };
 
 export default $1$;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+`svfcompien`
+</td>
+<td>Solid empty Void Component with import and named export</td>
+<td>
+
+```tsx
+import {VoidComponent} from "solid-js";
+
+export const $1$: VoidComponent<{ $2$ }> = props => {
+    return (
+        <div>$END$</div>
+    );
+};
 ```
 
 </td>
