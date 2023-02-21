@@ -1,23 +1,22 @@
 # Changelog
 
+## [1.0.7]
+
+### Added
+
+- Support 2022.3
+- Update `TemplateContextType`
+- Void component with named export
+
 ## [1.0.6]
 
 ## [1.0.5]
 
 ## [1.0.4]
 
-### Fix
-
-- Support 2022.3
-- Update deprecated TemplateContextType
-
 ## [1.0.3]
 
 ## [1.0.2]
-
-### Added
-
-- Void component with named export
 
 ## [1.0.1]
 
@@ -35,6 +34,8 @@
 ### Added
 
 - Initial project scaffold
+
+[1.0.7]: https://github.com/hnggngn/solid-snippets/compare/v1.0.6...v1.0.7
 
 [1.0.6]: https://github.com/hnggngn/solid-snippets/compare/v1.0.5...v1.0.6
 
