@@ -26,7 +26,7 @@
         <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
         <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
-            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
         </context>
     </template>
     <template name="int" value="export interface $1$ {&#10;    $END$&#10;}" description="Typescript Interface"
@@ -68,7 +68,7 @@
         <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
         <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
-            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
         </context>
     </template>
     <template name="sfcompien"
@@ -78,7 +78,7 @@
         <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
         <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
-            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
         </context>
     </template>
     <template name="spfcompien"
@@ -88,7 +88,7 @@
         <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
         <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
-            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
         </context>
     </template>
     <template name="sffcompie"
@@ -98,7 +98,7 @@
         <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
         <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
-            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
         </context>
     </template>
     <template name="sffcompien"
@@ -108,7 +108,7 @@
         <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
         <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
-            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
         </context>
     </template>
     <template name="svfcompie"
@@ -118,7 +118,7 @@
         <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
         <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
-            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
         </context>
     </template>
     <template name="svfcompien"
@@ -128,7 +128,7 @@
         <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
         <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
-            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
         </context>
     </template>
     <template name="asyncfarr" value="const $VAR_NAME$ = async ($PARAM$) =&gt; $END$;"
@@ -209,6 +209,25 @@
         <variable name="1" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
             <option name="JSX_HTML" value="true"/>
+        </context>
+    </template>
+    <template name="sjfcompie"
+              value="const $1$= props =&gt; {&#10;    return (&#10;        &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;};&#10;&#10;export default $1$;"
+              description="Solid empty function component with import and default export" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
+            <option name="TS_TOP_LEVEL_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="sjfcompien"
+              value="export const $1$= props =&gt; {&#10;    return (&#10;        &lt;div&gt;$END$&lt;/div&gt;&#10;    );&#10;};"
+              description="Solid empty function component with import and named export" toReformat="true"
+              toShortenFQNames="true">
+        <variable name="1" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JS_TOP_LEVEL_STATEMENT" value="true"/>
         </context>
     </template>
 </templateSet>

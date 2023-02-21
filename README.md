@@ -1,9 +1,17 @@
+<p>
+  <a href="https://github.com/hnggngn/solid-snippets">
+    <img width="100%" src="https://assets.solidjs.com/banner?type=Snippets&background=tiles&project=%20" alt="Solid Snippets">
+  </a>
+</p>
+
 # Solid Snippets
 
 A helpful snippets for Solid.js with Typescript.
 
 ## Available Snippets
+
 ### Component
+
 <table>
 <thead>
 <th>Shortcut</th>
@@ -20,9 +28,9 @@ A helpful snippets for Solid.js with Typescript.
 <td>
 
 ```tsx
-import { Component } from "solid-js";
+import {Component} from "solid-js";
 
-const $1$: Component<{$2$}> = props => {
+const $1$: Component<{ $2$ }> = props => {
     return (
         <div>$END$</div>
     );
@@ -30,6 +38,7 @@ const $1$: Component<{$2$}> = props => {
 
 export default $1$;
 ```
+
 </td>
 </tr>
 <tr>
@@ -41,14 +50,15 @@ export default $1$;
 <td>
 
 ```tsx
-import { Component } from "solid-js";
+import {Component} from "solid-js";
 
-export const $1$: Component<{$2$}> = props => {
+export const $1$: Component<{ $2$ }> = props => {
     return (
         <div>$END$</div>
     );
 };
 ```
+
 </td>
 </tr>
 <tr>
@@ -60,9 +70,9 @@ export const $1$: Component<{$2$}> = props => {
 <td>
 
 ```tsx
-import { FlowComponent, JSX } from "solid-js";
+import {FlowComponent, JSX} from "solid-js";
 
-const $1$: FlowComponent<{$2$, JSX.Element}> = props => {
+const $1$: FlowComponent<{ $2$, JSX.Element }> = props => {
     return (
         <div>{props.children}</div>
     );
@@ -70,6 +80,7 @@ const $1$: FlowComponent<{$2$, JSX.Element}> = props => {
 
 export default $1$;
 ```
+
 </td>
 </tr>
 <tr>
@@ -81,14 +92,15 @@ export default $1$;
 <td>
 
 ```tsx
-import { FlowComponent, JSX } from "solid-js";
+import {FlowComponent, JSX} from "solid-js";
 
-export const $1$: FlowComponent<{$2$, JSX.Element}> = props => {
+export const $1$: FlowComponent<{ $2$, JSX.Element }> = props => {
     return (
         <div>{props.children}</div>
     );
 };
 ```
+
 </td>
 </tr>
 <tr>
@@ -100,9 +112,9 @@ export const $1$: FlowComponent<{$2$, JSX.Element}> = props => {
 <td>
 
 ```tsx
-import { ParentComponent } from "solid-js";
+import {ParentComponent} from "solid-js";
 
-const $1$: ParentComponent<{$2$}> = props => {
+const $1$: ParentComponent<{ $2$ }> = props => {
     return (
         <div>{props.children}</div>
     );
@@ -110,6 +122,7 @@ const $1$: ParentComponent<{$2$}> = props => {
 
 export default $1$;
 ```
+
 </td>
 </tr>
 <tr>
@@ -121,14 +134,15 @@ export default $1$;
 <td>
 
 ```tsx
-import { ParentComponent } from "solid-js";
+import {ParentComponent} from "solid-js";
 
-export const $1$: ParentComponent<{$2$}> = props => {
+export const $1$: ParentComponent<{ $2$ }> = props => {
     return (
         <div>{props.children}</div>
     );
 };
 ```
+
 </td>
 </tr>
 <tr>
@@ -140,9 +154,9 @@ export const $1$: ParentComponent<{$2$}> = props => {
 <td>
 
 ```tsx
-import { VoidComponent } from "solid-js";
+import {VoidComponent} from "solid-js";
 
-const $1$: VoidComponent<{$2$}> = props => {
+const $1$: VoidComponent<{ $2$ }> = props => {
     return (
         <div>$END$</div>
     );
@@ -150,12 +164,14 @@ const $1$: VoidComponent<{$2$}> = props => {
 
 export default $1$;
 ```
+
 </td>
 </tr>
 </tbody>
 </table>
 
 ### Reactivity
+
 <table>
 <thead>
 <th>Shortcut</th>
@@ -176,6 +192,7 @@ createEffect(() => {
     $END$
 });
 ```
+
 </td>
 </tr>
 <tr>
@@ -189,6 +206,7 @@ createEffect(() => {
 ```tsx
 const $VAR$ = createMemo(() => $DEFAULT_VAL$);
 ```
+
 </td>
 </tr>
 <tr>
@@ -200,8 +218,10 @@ const $VAR$ = createMemo(() => $DEFAULT_VAL$);
 <td>
 
 ```tsx
-const [data, {mutate, refetch}] = createResource($DEFAULT_VAL$);$END$
+const [data, {mutate, refetch}] = createResource($DEFAULT_VAL$);
+$END$
 ```
+
 </td>
 </tr>
 <tr>
@@ -213,14 +233,17 @@ const [data, {mutate, refetch}] = createResource($DEFAULT_VAL$);$END$
 <td>
 
 ```tsx
-const [$VAR$, set$VAR_SET$] = createSignal($DEFAULT_VAL$);$END$
+const [$VAR$, set$VAR_SET$] = createSignal($DEFAULT_VAL$);
+$END$
 ```
+
 </td>
 </tr>
 </tbody>
 </table>
 
 ### Store
+
 <table>
 <thead>
 <th>Shortcut</th>
@@ -237,14 +260,17 @@ const [$VAR$, set$VAR_SET$] = createSignal($DEFAULT_VAL$);$END$
 <td>
 
 ```tsx
-const [$VAR$, set$VAR_SET$] = createStore($DEFAULT_VAL$);$END$
+const [$VAR$, set$VAR_SET$] = createStore($DEFAULT_VAL$);
+$END$
 ```
+
 </td>
 </tr>
 </tbody>
 </table>
 
 ### Lifecycles
+
 <table>
 <thead>
 <th>Shortcut</th>
@@ -265,6 +291,7 @@ onMount(() => {
     $END$
 });
 ```
+
 </td>
 </tr>
 <tr>
@@ -280,6 +307,7 @@ onError(() => {
     $END$
 });
 ```
+
 </td>
 </tr>
 <tr>
@@ -295,12 +323,14 @@ onCleanup(() => {
     $END$
 });
 ```
+
 </td>
 </tr>
 </tbody>
 </table>
 
 ### Control Flow
+
 <table>
 <thead>
 <th>Shortcut</th>
@@ -321,6 +351,7 @@ onCleanup(() => {
     {(item) => <div>{item}</div>}
 </For>
 ```
+
 </td>
 </tr>
 <tr>
@@ -336,6 +367,7 @@ onCleanup(() => {
     <div>$2$</div>
 </Show>
 ```
+
 </td>
 </tr>
 <tr>
@@ -353,6 +385,7 @@ onCleanup(() => {
     </Match>
 </Switch>
 ```
+
 </td>
 </tr>
 </tbody>
