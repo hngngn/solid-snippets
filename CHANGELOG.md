@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.0.8]
+
 ## [1.0.7]
 
 ### Added
@@ -34,6 +36,8 @@
 ### Added
 
 - Initial project scaffold
+
+[1.0.8]: https://github.com/hnggngn/solid-snippets/compare/v1.0.7...v1.0.8
 
 [1.0.7]: https://github.com/hnggngn/solid-snippets/compare/v1.0.6...v1.0.7
 
