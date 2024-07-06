@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.3]
+- Disable building searchable
+
+## [1.1.2]
+- Support 2024.2
+
 ## [1.1.1]
 - Support 2023.1
 
